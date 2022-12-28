@@ -42,6 +42,13 @@ Feature: Document Types Functionality Test
     And Send keys in the Fields
       | nameInput | anotherName1 |
 
+   # And Send keys in the Document Types
+    #  | nameInput | Group_4 |
+   # And Click on the elements in the Document Types
+   #   | searchButton |
+   #   | editButton |
+   # And Send keys in the Document Types
+    #  | nameInput | Group_4444 |
 
     And Click on the elements in the Document Types
       | saveButton |
@@ -59,6 +66,6 @@ Feature: Document Types Functionality Test
       | deleteButton    |
       | deleteDialogBtn |
 
-    Then Success message should be displayed
+    # Then Success message should be displayed
 
 

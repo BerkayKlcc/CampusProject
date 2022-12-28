@@ -41,6 +41,12 @@ Feature: Fields Functionality Test
 
     Then Success message should be displayed
 
+ # And Click on the elements in the Fields
+    #  | searchButton |
+    #  | editButton   |
+ # And Send keys in the Fields
+    #  | nameInput | Group_4 |
+
   Scenario: Delete Fields
 
     When Navigate to Fields
