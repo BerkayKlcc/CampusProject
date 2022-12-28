@@ -7,65 +7,58 @@ import org.openqa.selenium.support.PageFactory;
 
 public class LeftNav extends Parent {
 
-    public LeftNav() {
-        PageFactory.initElements(GenWebDrv.getDriver(), this);
+    public LeftNav(){
+        PageFactory.initElements(GenWebDrv.getDriver(),this);
     }
 
-    @FindBy(xpath = "//span[text()='Human Resources']")
+    @FindBy(xpath="//span[text()='Human Resources']")
     private WebElement humanResource_1;
 
-    @FindBy(xpath = "(//span[text()='Setup'])[3]")
+    @FindBy(xpath="(//span[text()='Setup'])[3]")
     private WebElement setup_1;
 
-    @FindBy(xpath = "(//span[text()='Position Categories'])[1]")
+    @FindBy(xpath="(//span[text()='Position Categories'])[1]")
     private WebElement positionCategory_1;
-
-    @FindBy(xpath = "(//span[text()='Attestations'])[1]")
+    @FindBy(xpath="(//span[text()='Attestations'])[1]")
     private WebElement attestations_1;
 
-    @FindBy(css = "div[class='children ng-tns-c252-18 ng-trigger ng-trigger-slideInOut ng-star-inserted'] > :nth-child(1) > a")
-    private WebElement positions;
 
-    @FindBy(css = "span[class='nav-link-title ng-tns-c252-7 ng-star-inserted']")
-    private WebElement setupLeftNav;
+    @FindBy(xpath="//span[@class='nav-link-title ng-tns-c252-7 ng-star-inserted']")
+    private WebElement setup;
 
-    @FindBy(css = "span[class='nav-link-title ng-tns-c252-9 ng-star-inserted']")
-    private WebElement schoolSetup;
+    @FindBy(xpath="//span[@class='nav-link-title ng-tns-c252-8 ng-star-inserted']")
+    private WebElement parameters;
 
-    @FindBy(css = "div[class='children ng-tns-c252-9 ng-trigger ng-trigger-slideInOut ng-star-inserted'] > :nth-child(4) >a > span")
-    private WebElement schoolLocations;
+    @FindBy(xpath="//span[normalize-space()='Document Types']")
+    private WebElement documentTypes;
 
+    @FindBy (xpath = "//span[text()='Setup']")
+    private WebElement setupOneMenu;
+
+    @FindBy (xpath = "//fa-icon//following::span[text()='Parameters']")
+    private WebElement parametersSubMenu;
+
+    @FindBy(xpath = "//span[@class='nav-link-title ng-star-inserted'][normalize-space()='Fields']")
+    private WebElement fields;
 
     WebElement myElement;
 
-    public void findAndClick(String strElement) {
+    public void findAndClick(String strElement){
 
-        switch (strElement) {
-            case "humanResource_1":
-                myElement = humanResource_1;
-                break;
-            case "setup_1":
-                myElement = setup_1;
-                break;
-            case "positionCategory_1":
-                myElement = positionCategory_1;
-                break;
-            case "attestations_1":
-                myElement = attestations_1;
-                break;
-            case "positions":
-                myElement = positions;
-                break;
-            case "setupLeftNav":
-                myElement = setupLeftNav;
-                break;
-            case "schoolSetup":
-                myElement = schoolSetup;
-                break;
-            case "schoolLocations":
-                myElement = schoolLocations;
-                break;
+        switch (strElement){
+            case "humanResource_1" : myElement=humanResource_1;break;
+            case "setup_1" : myElement=setup_1;break;
+            case "positionCategory_1" : myElement=positionCategory_1;break;
+            case "attestations_1" : myElement=attestations_1;break;
+            case "setup" : myElement=setup;break;
+            case "parameters" : myElement=parameters;break;
+            case "documentTypes" : myElement=documentTypes;break;
+            case "setupOneMenu" : myElement =setupOneMenu; break;
+            case "parametersSubMenu" : myElement =parametersSubMenu; break;
+            case "fields" : myElement =fields; break;
         }
         clickFunction(myElement);
     }
+
+
 }

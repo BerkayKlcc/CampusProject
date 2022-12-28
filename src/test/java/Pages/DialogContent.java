@@ -8,17 +8,17 @@ import org.openqa.selenium.support.PageFactory;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 
-public class DialogContent extends Parent {
+public class DialogContent extends Parent{
 
-    public DialogContent() {
+    public DialogContent(){
 
-        PageFactory.initElements(GenWebDrv.getDriver(), this);
+        PageFactory.initElements(GenWebDrv.getDriver(),this);
     }
 
-    @FindBy(css = "input[formcontrolname='username']")
+    @FindBy(css="input[formcontrolname='username']")
     private WebElement username;
 
-    @FindBy(css = "input[formcontrolname='password']")
+    @FindBy(css="input[formcontrolname='password']")
     private WebElement password;
 
     @FindBy(css = "button[aria-label='LOGIN']")
@@ -30,7 +30,7 @@ public class DialogContent extends Parent {
     @FindBy(css = "button[class='consent-give']")
     private WebElement acceptCookies;
 
-    @FindBy(xpath = "//ms-add-button[contains(@tooltip,'TITLE.ADD')]//button")
+    @FindBy(xpath="//ms-add-button[contains(@tooltip,'TITLE.ADD')]//button")
     private WebElement addButton;                                               // Ortak
 
     @FindBy(xpath = "//ms-text-field[@formcontrolname='name']//input")
@@ -45,10 +45,10 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "//ms-search-button//button")
     private WebElement searchButton;                                            // Ortak
 
-    @FindBy(xpath = "(//ms-delete-button//button)[1]")
+    @FindBy(xpath="(//ms-delete-button//button)[1]")
     private WebElement deleteButton;                                            // Ortak
 
-    @FindBy(xpath = "//span[text()=' Delete ']")
+    @FindBy(xpath="//span[text()=' Delete ']")
     private WebElement deleteDialogBtn;                                         // Ortak
 
     @FindBy(xpath = "//ms-save-button//button")
@@ -57,97 +57,87 @@ public class DialogContent extends Parent {
     @FindBy(css = "svg[class='svg-inline--fa fa-pen-to-square']")
     private WebElement editButton;                                              // Ortak
 
-    @FindBy(xpath = "//ms-text-field[@formcontrolname='shortName']//input")
-    private WebElement shortName;
 
-    @FindBy(css = "input[data-placeholder='Capacity']")
-    private WebElement capacity;
+    @FindBy(xpath = "//div[@id='mat-select-value-7']//span")
+    private WebElement stageDocTypes;
 
+    @FindBy(xpath = "//span[normalize-space()='Student Registration']")
+    private WebElement studentRegist;
+
+    @FindBy(xpath = "//span[contains(text(),'Save')]")
+    private WebElement saveDocTypes;
+
+    @FindBy(xpath = "//span[normalize-space()='Employment']")
+    private WebElement employment;
+
+    @FindBy(xpath = "//*[@formcontrolname='attachmentStages']")
+    private WebElement stageInput;
+
+    @FindBy(xpath = "(//*[@role='option'])[3]")
+    private WebElement stageTwo;
+
+    @FindBy(xpath = "//div[@id='mat-select-value-9']")
+    private WebElement fieldTypeText;
+
+    @FindBy(css="svg[role='img'][data-icon='plus']")
+    private WebElement fieldsAddButton;
 
     WebElement myElement;
 
-    public void findAndSend(String strElement, String value) {
+    public void findAndSend(String strElement, String value){
         //element get
 
-        switch (strElement) {
-            case "username":
-                myElement = username;
-                break;
-            case "password":
-                myElement = password;
-                break;
-            case "nameInput":
-                myElement = nameInput;
-                break;
-            case "searchInput":
-                myElement = searchInput;
-                break;
-            case "shortName":
-                myElement = shortName;
-                break;
-            case "capacity":
-                myElement = capacity;
-                break;
+        switch (strElement){
+            case "username" : myElement=username;break;
+            case "password" : myElement=password;break;
+            case "nameInput" : myElement=nameInput;break;
+            case "searchInput" : myElement=searchInput;break;
 
         }
-        sendKeysFunction(myElement, value);
+        sendKeysFunction(myElement,value);
     }
 
-    public void findAndClick(String strElement) {
+    public void findAndClick(String strElement){
         //element get
-        switch (strElement) {
-            case "loginButton":
-                myElement = loginButton;
-                break;
-            case "acceptCookies":
-                myElement = acceptCookies;
-                break;
-            case "addButton":
-                myElement = addButton;
-                break;
-            case "searchButton":
-                myElement = searchButton;
-                break;
-            case "deleteButton":
-                myElement = deleteButton;
-                break;
-            case "deleteDialogBtn":
-                myElement = deleteDialogBtn;
-                break;
-            case "saveButton":
-                myElement = saveButton;
-                break;
-            case "editButton":
-                myElement = editButton;
-                break;
+        switch (strElement){
+            case "loginButton" : myElement=loginButton;break;
+            case "acceptCookies": myElement=acceptCookies;break;
+            case "addButton": myElement=addButton;break;
+            case "searchButton": myElement=searchButton;break;
+            case "deleteButton": myElement=deleteButton;break;
+            case "deleteDialogBtn": myElement=deleteDialogBtn;break;
+            case "saveButton": myElement=saveButton;break;
+            case "editButton": myElement=editButton;break;
+            case "stageDocTypes" : myElement=stageDocTypes;break;
+            case "studentRegist" : myElement=studentRegist;break;
+            case "saveDocTypes" : myElement=saveDocTypes;break;
+            case "employment" : myElement=employment;break;
+            case "stageInput" :myElement=stageInput; break;
+            case "stageTwo" : myElement =stageTwo; break;
+            case "fieldTypeText" : myElement =fieldTypeText; break;
+            case "fieldsAddButton" : myElement =fieldsAddButton; break;
 
         }
         clickFunction(myElement);
     }
 
-    public void findAndCountainsText(String strElement, String text) {
+    public void findAndCountainsText(String strElement,String text){
 
-        switch (strElement) {
-            case "txtTechnoStudy":
-                myElement = txtTechnoStudy;
-                break;
-            case "successMessage":
-                myElement = successMessage;
-                break;
+        switch (strElement){
+            case "txtTechnoStudy" : myElement=txtTechnoStudy;break;
+            case "successMessage" : myElement=successMessage;break;
         }
-        verifyContainsTextFunc(myElement, text);
+        verifyContainsTextFunc(myElement,text);
     }
-
-    public void findAndDelete(String searchTex) {
-        findAndSend("searchInput", searchTex);
+    public void  findAndDelete(String searchTex){
+        findAndSend("searchInput",searchTex);
         findAndClick("searchButton");
 
         waitUntilLoading();
         findAndClick("deleteButton");
         findAndClick("deleteDialogBtn");
     }
-
-    public void closeWindow() {
+    public void closeWindow(){
         Robot robot = null;
         try {
             robot = new Robot();
