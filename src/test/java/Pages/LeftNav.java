@@ -22,7 +22,6 @@ public class LeftNav extends Parent {
     @FindBy(xpath="(//span[text()='Attestations'])[1]")
     private WebElement attestations_1;
 
-
     @FindBy(xpath="//span[@class='nav-link-title ng-tns-c252-7 ng-star-inserted']")
     private WebElement setup;
 

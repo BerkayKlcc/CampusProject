@@ -38,7 +38,7 @@ Feature:BankAccounts Functionality
       | parameters   |
       | bankAccounts |
 
-
+#codes
     And User search before edit item from Dialog content
       | searchInput | gulB11 |
 
