@@ -8,7 +8,7 @@ Feature: Position Functionality
   Scenario: Add Position
     And Navigate to Positions Under HR  Setup
       | humanResource_1 |
-      | schoolSetup     |
+      | setup_1         |
       | positions       |
 
     And Click on the element in the Positions
