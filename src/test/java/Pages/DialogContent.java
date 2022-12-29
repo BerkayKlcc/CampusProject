@@ -71,6 +71,7 @@ public class DialogContent extends Parent{
     private WebElement employment;
 
 
+
     @FindBy(xpath = "(//*[@role='option'])[3]")
     private WebElement stageTwo;
 
