@@ -32,6 +32,7 @@ Feature: Position Functionality
     And Click on the element in the Positions
       | editButton |
 
+
     And User sending the key in Positions
       | nameInput | Group_4_can_edit |
 

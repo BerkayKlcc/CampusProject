@@ -6,6 +6,7 @@ Feature: School Locations
     Then User should login successfully
 
 
+
   Scenario: Add School Locations
     And Navigate to Setup on LeftNav
       | setupLeftNav    |

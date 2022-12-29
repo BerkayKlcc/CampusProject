@@ -11,6 +11,7 @@ public class SchoolLocations {
     LeftNav ln = new LeftNav();
     DialogContent dc = new DialogContent();
 
+
     @And("Navigate to Setup on LeftNav")
     public void navigateToSetupOnLeftNav(DataTable elements) {
         List<String> listElement = elements.asList(String.class);
