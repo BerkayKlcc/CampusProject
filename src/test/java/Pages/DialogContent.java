@@ -70,8 +70,6 @@ public class DialogContent extends Parent{
     @FindBy(xpath = "//span[normalize-space()='Employment']")
     private WebElement employment;
 
-    @FindBy(xpath = "//*[@formcontrolname='attachmentStages']")
-    private WebElement stageInput;
 
     @FindBy(xpath = "(//*[@role='option'])[3]")
     private WebElement stageTwo;
@@ -81,6 +79,22 @@ public class DialogContent extends Parent{
 
     @FindBy(css="svg[role='img'][data-icon='plus']")
     private WebElement fieldsAddButton;
+    @FindBy (css = "input[data-placeholder='Code']")
+    private WebElement code;
+    @FindBy (xpath=" //ms-text-field[@formcontrolname='shortName']//input")
+    private WebElement shortname;
+    @FindBy (xpath=" //ms-integer-field[@formcontrolname='capacity']//input")
+    private WebElement capacity;
+    @FindBy(xpath = "//*[@formcontrolname='attachmentStages']")
+    private WebElement stageInput;
+
+
+
+
+
+
+
+
 
     WebElement myElement;
 
@@ -92,6 +106,10 @@ public class DialogContent extends Parent{
             case "password" : myElement=password;break;
             case "nameInput" : myElement=nameInput;break;
             case "searchInput" : myElement=searchInput;break;
+            case "code": myElement=code; break;
+            case "shortname":  myElement= shortname; break;
+            case "capacity": myElement= capacity; break;
+
 
         }
         sendKeysFunction(myElement,value);

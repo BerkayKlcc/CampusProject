@@ -13,7 +13,10 @@ public class FormContent extends Parent{
 
     @FindBy(xpath = "")
     private WebElement write;
-
+    @FindBy (css = "mat-select[formcontrolname='type']")
+    private  WebElement locationtype;
+    @FindBy (xpath = "//span[text()=' Classroom ']")
+    private WebElement selecttype;
 
     WebElement myElement;
 
@@ -21,6 +24,10 @@ public class FormContent extends Parent{
         //element get :burda string isimden weblemente ulaşıcam
         switch (strlement){
           //  case "academicPeriod" : myElement = academicPeriod;break;
+            case "locationtype": myElement=locationtype; break;
+            case "selecttype": myElement=selecttype; break;
+
+
 
         }
         clickFunction(myElement);
