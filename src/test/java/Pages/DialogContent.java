@@ -57,31 +57,11 @@ public class DialogContent extends Parent {
     @FindBy(css = "svg[class='svg-inline--fa fa-pen-to-square']")
     private WebElement editButton;                                              // Ortak
 
-    //****
-    @FindBy(xpath = "//ms-masked-text-field[@formcontrolname='iban']/input")
-    private WebElement ibanInput;
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='shortName']//input")
+    private WebElement shortName;
 
-    @FindBy(xpath = "(//mat-select[@formcontrolname='currency'])/div/div")
-    private WebElement currency1;
-
-
-    @FindBy(xpath = "(//mat-option[@role='option']/span)[2]")
-    private WebElement currencyUSD;
-
-
-    @FindBy(css = "ms-text-field[formcontrolname='integrationCode']>input")
-    private WebElement integrationCodeBA;
-
-
-    @FindBy(xpath = "//ms-text-field[@formcontrolname='order']//input")
-    private WebElement order;
-
-
-    @FindBy(xpath = "//mat-select[@formcontrolname='schoolIds']")
-    private WebElement schools;
-
-    @FindBy(css = "mat-option[role='option']")
-    private WebElement schoolsOption;
+    @FindBy(css = "input[data-placeholder='Capacity']")
+    private WebElement capacity;
 
 
     WebElement myElement;
@@ -102,16 +82,15 @@ public class DialogContent extends Parent {
             case "searchInput":
                 myElement = searchInput;
                 break;
-
-            case "ibanInput" : myElement=ibanInput;break;
-            case "integrationCodeBA" : myElement=integrationCodeBA;break;
-            case "order" : myElement=order;break;
-
-
+            case "shortName":
+                myElement = shortName;
+                break;
+            case "capacity":
+                myElement = capacity;
+                break;
 
         }
         sendKeysFunction(myElement, value);
-
     }
 
     public void findAndClick(String strElement) {
@@ -142,12 +121,6 @@ public class DialogContent extends Parent {
                 myElement = editButton;
                 break;
 
-
-            case "currency1":myElement = currency1;break;
-            case "currencyUSD":myElement = currencyUSD;break;
-
-            case "schools":myElement = schools;break;
-            case "schoolsOption":myElement = schoolsOption;break;
         }
         clickFunction(myElement);
     }
@@ -185,17 +158,4 @@ public class DialogContent extends Parent {
         robot.keyRelease(KeyEvent.VK_TAB);
 
     }
-
-    public void findAndSearch(String strElement, String searchText) {
-        findAndSend("searchInput", searchText);
-        findAndClick("searchButton");
-        waitUntilLoading();
-    }
-
-    public void findAndEdit(String strElement, String text) {
-        findAndClick("editButton");
-        findAndSend("nameInput", text);
-        findAndClick("saveButton");
-    }
-
 }

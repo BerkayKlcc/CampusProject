@@ -47,9 +47,9 @@ Feature: School Locations
   Scenario: Delete Position
 
     And Navigate to Positions Under HR  Setup
-      | humanResource_1 |
-      | setup_1         |
-      | positions       |
+      | setupLeftNav    |
+      | schoolSetup     |
+      | schoolLocations |
 
     And Click on the element in the Position Categories
       | deleteButton    |
