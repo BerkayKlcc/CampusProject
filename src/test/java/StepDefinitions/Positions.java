@@ -14,6 +14,7 @@ public class Positions {
 
     LeftNav ln = new LeftNav();
 
+
     @And("Navigate to Positions Under HR  Setup")
     public void navigateToPositionsUnderHRSetup(DataTable elements) {
         List<String> listElement = elements.asList(String.class);
