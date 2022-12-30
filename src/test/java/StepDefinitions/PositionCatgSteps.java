@@ -19,6 +19,7 @@ public class PositionCatgSteps {
 
         for (String strButton : listElement){
             ln.findAndClick(strButton);
+
         }
     }
 
