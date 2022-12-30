@@ -44,7 +44,6 @@ Feature:Position Categories Functionality
       | setup_1            |
       | positionCategory_1 |
 
-
     And Click on the element in the Position Categories
       | delete_1 |
       | deleteConf_1 |
