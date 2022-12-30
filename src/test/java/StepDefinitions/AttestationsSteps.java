@@ -10,6 +10,7 @@ import java.util.List;
 public class AttestationsSteps {
     DialogContent dc = new DialogContent();
     LeftNav ln = new LeftNav();
+
     @And("Navigate to Attestations")
     public void navigateToAttestations(DataTable elements) {
         List<String> listElement = elements.asList(String.class);

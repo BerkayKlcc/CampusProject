@@ -49,5 +49,6 @@ Feature: Attestations Functionality
       | delete_1     |
       | deleteConf_1 |
 
+
     Then Success message should be displayed
 
