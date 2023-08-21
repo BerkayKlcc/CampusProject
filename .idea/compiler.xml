@@ -7,11 +7,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="FastTrackTest" />
+        <module name="CheckFlightStatus" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="FastTrackTest" target="18" />
+      <module name="CheckFlightStatus" target="18" />
     </bytecodeTargetLevel>
   </component>
 </project>

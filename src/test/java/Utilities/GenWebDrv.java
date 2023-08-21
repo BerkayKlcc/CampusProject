@@ -22,7 +22,6 @@ public class GenWebDrv {
         if (threadBrowserName.get() == null)
             threadBrowserName.set("chrome");
 
-
         if (threadDriver.get() == null) {
 
             switch (threadBrowserName.get()) {
@@ -55,7 +54,9 @@ public class GenWebDrv {
     public static void setThreadBrowserName(String browserName) {
         GenWebDrv.threadBrowserName.set(browserName);
     }
+
     public static String getThreadBrowserName() {
         return GenWebDrv.threadBrowserName.get();
     }
+
 }

@@ -2,7 +2,7 @@
 <extentreports>
     <configuration>
         <!-- report theme --> <!-- standard, dark -->
-        <theme>dark</theme>
+        <theme>STANDARD</theme>
 
         <!-- document encoding -->  <!-- defaults to UTF-8 -->
         <encoding>UTF-8</encoding>
@@ -11,10 +11,10 @@
         <protocol>https</protocol>
 
         <!-- title of the document -->
-        <documentTitle>Campus Report</documentTitle>
+        <documentTitle>Eurowings Report</documentTitle>
 
         <!-- report name - displayed at top-nav -->
-        <reportName>Campus Regression - Cucumber Report</reportName>
+        <reportName>Eurowings Test Report</reportName>
 
         <!-- global date format override -->  <!-- defaults to yyyy-MM-dd -->
         <dateFormat>yyyy-MM-dd</dateFormat>
@@ -25,17 +25,18 @@
         <!-- custom javascript -->
         <scripts>
             <![CDATA[
-        $(document).ready(function() {
+               $(document).ready(function() {
 
-        });
-      ]]>
+               });
+             ]]>
         </scripts>
 
         <!-- custom styles -->
         <styles>
             <![CDATA[
 
-      ]]>
+             ]]>
         </styles>
     </configuration>
 </extentreports>
+

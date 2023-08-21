@@ -6,7 +6,6 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-
 import java.time.Duration;
 
 public class Parent {
@@ -14,7 +13,6 @@ public class Parent {
     WebDriverWait wait = new WebDriverWait( GenWebDrv.getDriver(), Duration.ofSeconds( 30 ) );
 
     public void sendKeysFunction(WebElement element, String value) {
-
         waitUntilVisiable( element );
         scrollToElement( element );
         element.clear();
@@ -22,7 +20,6 @@ public class Parent {
     }
 
     public void clickFunction(WebElement element) {
-
         waitUntilClickable( element );
         scrollToElement( element );
         element.click();
